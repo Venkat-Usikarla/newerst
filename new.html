@@ -1,8 +1,148 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bitch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A hands-on showcase of common HTML elements.">
+    <title>HTML Workshop: Basic Tags</title>
 </head>
 <body>
-    <h1>You're so fine shyt</h1>
+    <header>
+        <h1>HTML Workshop</h1>
+        <p>A showcase of useful HTML tags and elements.</p>
+        <nav aria-label="Main navigation">
+            <a href="#text">Text</a> |
+            <a href="#lists">Lists</a> |
+            <a href="#table">Table</a> |
+            <a href="#form">Form</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="text">
+            <h2>Headings and text</h2>
+            <h3>A level-three heading</h3>
+            <h4>A level-four heading</h4>
+            <h5>A level-five heading</h5>
+            <h6>A level-six heading</h6>
+            <p>This is a paragraph with <strong>important text</strong>,
+                <em>emphasized text</em>, <mark>highlighted text</mark>,
+                <small>small text</small>, and <span>a generic inline span</span>.</p>
+            <p>You can show <del>removed text</del> and <ins>inserted text</ins>,
+                H<sub>2</sub>O, and 2<sup>nd</sup> powers.</p>
+            <p>Line one<br>Line two, after a line break.</p>
+            <hr>
+            <p>Use <code>&lt;p&gt;</code> for a paragraph and
+                <kbd>Ctrl</kbd> + <kbd>S</kbd> to save.</p>
+            <pre><code>function greet() {
+    return "Hello, workshop!";
+}</code></pre>
+            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML">
+                <p>HTML gives structure and meaning to web content.</p>
+            </blockquote>
+            <p>The workshop starts <time datetime="2026-10-09">today</time>.
+                <abbr title="HyperText Markup Language">HTML</abbr> is the topic.</p>
+        </section>
+
+        <section id="lists">
+            <h2>Lists</h2>
+            <h3>Unordered list</h3>
+            <ul>
+                <li>Headings</li>
+                <li>Paragraphs</li>
+                <li>Links</li>
+            </ul>
+            <h3>Ordered list</h3>
+            <ol>
+                <li>Write the markup</li>
+                <li>Save the file</li>
+                <li>Open it in a browser</li>
+            </ol>
+            <h3>Description list</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>The markup language used to structure web pages.</dd>
+                <dt>Element</dt>
+                <dd>A building block in an HTML document.</dd>
+            </dl>
+        </section>
+
+        <section id="table">
+            <h2>A simple table</h2>
+            <table>
+                <caption>Workshop topics</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Topic</th>
+                        <th scope="col">Example tag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Paragraph</td>
+                        <td><code>&lt;p&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td>Link</td>
+                        <td><code>&lt;a&gt;</code></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Two examples</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="form">
+            <h2>A sample form</h2>
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>About you</legend>
+                    <p>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your name">
+                    </p>
+                    <p>
+                        <label for="topic">Favorite topic:</label>
+                        <select id="topic" name="topic">
+                            <option value="text">Text</option>
+                            <option value="lists">Lists</option>
+                            <option value="forms">Forms</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="notes">Notes:</label><br>
+                        <textarea id="notes" name="notes" rows="3" cols="30"></textarea>
+                    </p>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <h2>Other useful elements</h2>
+            <figure>
+                <img src="https://placehold.co/480x160?text=HTML+Workshop"
+                    alt="A placeholder banner for the HTML workshop" width="480" height="160">
+                <figcaption>An image and its caption.</figcaption>
+            </figure>
+            <details>
+                <summary>What does HTML stand for?</summary>
+                <p>HyperText Markup Language.</p>
+            </details>
+            <p>Progress: <progress value="3" max="5">3 of 5</progress></p>
+            <p>Workshop score: <meter value="0.8">80%</meter></p>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+                Learn more about HTML</a></p>
+            <div>This is a generic block container (<code>&lt;div&gt;</code>).</div>
+        </section>
+    </main>
+
+    <footer>
+        <address>Created for an HTML workshop.</address>
+        <p><small>Thanks for taking part!</small></p>
+    </footer>
 </body>
 </html>
